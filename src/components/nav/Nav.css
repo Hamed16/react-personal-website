@@ -1,0 +1,41 @@
+nav {
+    background: rgba(0,0,0,0.3);
+
+    /* To entirely fill the compnents in the nav bar*/
+    width: max-content;
+
+    display: block;
+    padding: 0.7rem 1.7rem;
+    
+    /* Z-index is basically what stack level it
+    is on, like bring to front/back in canva & slide */
+    z-index: 2;
+
+    position: fixed;
+    left: calc(50% - 11rem);
+    bottom: 2rem;
+    display: flex;
+    gap: 0.8rem;
+    border-radius: 3rem;
+
+    /*Gives the background some blur */
+    backdrop-filter: blur(15px);
+}
+
+nav a {
+    background: transparent;
+    padding: 0.9rem;
+    border-radius: 50%;
+    display: flex;
+    color: var(--color-light);
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    background: rgba(0,0,0,0.3)
+}
+
+nav a.active {
+    background: var(--color-bg);
+    color: var(--white);
+}

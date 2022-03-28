@@ -1,0 +1,87 @@
+header {
+    height: 100vh;
+    padding-top: 7rem;
+
+    /* Hides excess stuff that could spill out of its section */
+    overflow: hidden;
+}
+
+.header__container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+
+}
+
+/* CTA buttons */
+
+.cta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+/* Header Socials */
+
+.header__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+
+    /* This makes it positions relative the previous
+     item instead of below it, so on the side at the same level*/
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+}
+
+.header__socials::after {
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+}
+
+/* Image */
+
+.me {
+    /* Gives us a nice gradients from the color chosen to transparent */
+    background: linear-gradient(var(--color-primary), transparent);
+   
+    width: 22rem;
+    height: 29rem;
+    position: absolute;
+
+    /* Centers image in middle by indeting the amount of the 
+    width but half less for it to be centered*/
+    left: calc(50% - 11rem);
+
+    margin-top: 2rem;
+
+    /*Gives the dome shape for the image */
+    border-radius: 12rem 12rem 0 0;
+    
+    overflow: hidden;
+
+    /* Padding makes borders around elemnts, wont be immediatly visible but other
+     elemnts used will not be able to be place in those border */
+    padding: 5rem 1.5 1.5 1.5;
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        height: 68vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        height: 100vh;
+    }
+
+    .header__socials {
+        display: none;
+    }
+}
